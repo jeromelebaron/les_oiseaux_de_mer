@@ -3,8 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>fr.les-oiseaux-de-mer</groupId>
-		<artifactId>main</artifactId>
+		<artifactId>dependencies</artifactId>
 		<version>0.1-SNAPSHOT</version>
+		<relativePath>../dependencies/pom.xml</relativePath>
 	</parent>
 	<artifactId>transformer-implementation</artifactId>
 </project>

@@ -1,17 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>fr.les-oiseaux-de-mer</groupId>
-		<artifactId>main</artifactId>
-		<version>0.1-SNAPSHOT</version>
-	</parent>
+	<groupId>fr.les-oiseaux-de-mer</groupId>
 	<artifactId>dependencies</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-	<properties>
-		<java.version>9.0</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.target>9</maven.compiler.target>
+      <maven.compiler.source>9</maven.compiler.source>
+    </properties>
 
 	<build>
 		<plugins>
@@ -21,8 +20,10 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
 				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+					<showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
 		</plugins>
