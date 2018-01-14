@@ -5,9 +5,8 @@
 		<groupId>fr.les-oiseaux-de-mer</groupId>
 		<artifactId>dependencies</artifactId>
 		<version>0.1-SNAPSHOT</version>
-		<relativePath>../dependencies/pom.xml</relativePath>
 	</parent>
-	<artifactId>service-implementation</artifactId>
+	<artifactId>application</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -16,7 +15,12 @@
 		</dependency>
 		<dependency>
 			<groupId>fr.les-oiseaux-de-mer</groupId>
-			<artifactId>service-interface</artifactId>
+			<artifactId>controller</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fr.les-oiseaux-de-mer</groupId>
+			<artifactId>service-implementation</artifactId>
 		</dependency>
 	</dependencies>
+
 </project>

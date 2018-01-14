@@ -8,4 +8,12 @@
 		<relativePath>../dependencies/pom.xml</relativePath>
 	</parent>
 	<artifactId>dao-impl</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>fr.les-oiseaux-de-mer</groupId>
+			<artifactId>dao-interface</artifactId>
+		</dependency>
+	</dependencies>
+
 </project>

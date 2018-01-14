@@ -5,7 +5,7 @@
 	<artifactId>main</artifactId>
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<modules>
 		<module>entity</module>
 		<module>controller</module>
@@ -17,6 +17,7 @@
 		<module>service-interface</module>
 		<module>transformer-impl</module>
 		<module>transformer-interface</module>
+		<module>application</module>
 	</modules>
 
 </project>

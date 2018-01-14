@@ -6,11 +6,61 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-    <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-      <maven.compiler.target>9</maven.compiler.target>
-      <maven.compiler.source>9</maven.compiler.source>
-    </properties>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<optional>true</optional>
+			</dependency>
+			<dependency>
+				<groupId>fr.les-oiseaux-de-mer</groupId>
+				<artifactId>entity</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.les-oiseaux-de-mer</groupId>
+				<artifactId>dto</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.les-oiseaux-de-mer</groupId>
+				<artifactId>dao-interface</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.les-oiseaux-de-mer</groupId>
+				<artifactId>dao-impl</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.les-oiseaux-de-mer</groupId>
+				<artifactId>service-interface</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.les-oiseaux-de-mer</groupId>
+				<artifactId>service-implementation</artifactId>
+				<version>${version}</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.les-oiseaux-de-mer</groupId>
+				<artifactId>controller</artifactId>
+				<version>${version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
@@ -18,12 +68,11 @@
 				<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.7.0</version>
 				<configuration>
-					<source>${maven.compiler.source}</source>
-					<target>${maven.compiler.target}</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 					<showWarnings>true</showWarnings>
-                    <showDeprecation>true</showDeprecation>
+					<showDeprecation>true</showDeprecation>
 				</configuration>
 			</plugin>
 		</plugins>

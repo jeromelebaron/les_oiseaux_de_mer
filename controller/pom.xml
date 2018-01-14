@@ -8,4 +8,20 @@
 		<relativePath>../dependencies/pom.xml</relativePath>
 	</parent>
 	<artifactId>controller</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>fr.les-oiseaux-de-mer</groupId>
+			<artifactId>service-interface</artifactId>
+		</dependency>
+	</dependencies>
 </project>
