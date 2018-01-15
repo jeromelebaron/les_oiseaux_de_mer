@@ -8,7 +8,7 @@ import { HEROES } from '../mock-heroes';
     styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-    
+
     /** La liste complète des héros. */
     heroes = HEROES;
     /** Le héros sélectionné. */
@@ -19,7 +19,7 @@ export class HeroesComponent implements OnInit {
     }
 
     constructor() { }
-    
+
     ngOnInit() {
     }
 
