@@ -1,7 +1,8 @@
 <h3>Top Heroes</h3>
 <div class="grid grip-pad">
     <a class="col-1-4"
-        *ngFor="let hero of heroes">
+        *ngFor="let hero of heroes"
+        routerLink='/detail/{{hero.id}}'>
         <div class="module hero">
             <h4>{{hero.name}}</h4>
         </div>

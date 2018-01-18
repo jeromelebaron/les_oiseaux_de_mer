@@ -8,13 +8,17 @@ import { MessageService } from './message.service';
 @Injectable()
 export class HeroService {
 
-    getHeroes(): Observable<Hero[]> {
-        this.messageService.add('Hero service : heroes fetched');
-        return of(HEROES);
-    };
-
     constructor(
         private messageService: MessageService
     ) {}
 
+    getHeroes(): Observable<Hero[]> {
+        this.messageService.add('Hero service : heroes fetched');
+        return of(HEROES);
+    }
+
+    getHero(id: number): Observable<Hero> {
+        this.messageService.add(`HeroService: fectched hero id=${id}`);
+        return of(HEROES.find(hero => hero.id === id));
+    }
 }
