@@ -1,5 +1,4 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 export class InMemoryDataService implements InMemoryDbService {
 
@@ -16,6 +15,6 @@ export class InMemoryDataService implements InMemoryDbService {
             { id: 19, name: 'Magma' },
             { id: 20, name: 'Tornado' }
         ];
-        return heroes;
+        return {heroes};
     }
 }
