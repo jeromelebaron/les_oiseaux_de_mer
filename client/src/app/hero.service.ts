@@ -38,6 +38,18 @@ export class HeroService {
         );
     }
 
+    searchHeroes(critere: string): Observable<Hero[]> {
+        const url = `api/heroes/?name=${critere}`;
+        if (!critere.trim()) {
+            return of([]);
+        } else {
+            return this.http.get<Hero[]>(url).pipe(
+                tap(_ => this.log(`found heroes matching "${critere}"`)),
+                catchError(this.handleError<Hero[]>('search Heroes', []))
+            );
+        }
+    }
+
     update(hero: Hero): Observable<any> {
         return this.http.put(this.heroesUrl, hero, httpOptions).pipe(
             tap(_ => this.log(`updated hero id=${hero.id}`)),
